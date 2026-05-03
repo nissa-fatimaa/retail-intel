@@ -1,4 +1,4 @@
-Retail Intel — Project Reference
+Retail Intel - Project Reference
 A standalone PyQt6 desktop application for retail demand & pricing intelligence.
 
 Stack
@@ -60,14 +60,14 @@ retail_intel/
 │   └── logo.svg                # Brand mark
 └── data/                       # SQLite DB file lives here at runtime
 
-Demo accounts
+Demo accounts:
 Role	Username	Password	Sees
-Staff	staff	staff123	Daily ops dashboard, inventory, events
-Visitor	visitor	visitor123	Public-facing store snapshot, events
-Executive	executive	exec123	Strategic KPIs, forecasting, pricing, simulator
-Anyone may also register via the login window (role selectable).
+Staff	staff	staff123	# Daily ops dashboard, inventory, events
+Visitor	visitor	visitor123	# Public-facing store snapshot, events
+Executive	executive	exec123	# Strategic KPIs, forecasting, pricing, simulator
+Anyone may also register via the login window (role selectable)
 
-Default location
+Default location:
 Store: Bahria Fresh Mart
 City: Lahore, Pakistan
 Coordinates: 31.5204 N, 74.3587 E (Asia/Karachi)
@@ -130,7 +130,7 @@ Pricing algorithm (no ML)
 
 The first launch creates data/retail_intel.db, seeds the catalogue and demo users, and pulls a 7-day weather forecast from Open-Meteo. Subsequent launches reuse the existing database.
 
-INDIVIDUAL FILE DESCRIPTION
+INDIVIDUAL FILE DESCRIPTION:
 1. assets/logo.svg --> logo image for Retail Intel
 2. config/settings.py --> Centralized configuration for Retail Intel. All paths, theme colours, location defaults, and role definitions live here so the rest of the codebase has a single source of truth
 3. database/db_manager.py --> SQLite database manager. Provides a thread-safe connection helper, schema initialization, and small utility methods used by services and the seed script.
@@ -157,7 +157,6 @@ INDIVIDUAL FILE DESCRIPTION
 8. services/forecasting_service.py -->Demand forecasting service.
 
 Pure rule-based pipeline (NO machine learning):
-
 Base forecast for day t+k:
     base = weighted_moving_average(last_window_days_of_sales)
         + day_of_week_seasonality_adjustment
